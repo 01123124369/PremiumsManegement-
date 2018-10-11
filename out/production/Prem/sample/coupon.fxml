@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="full_name" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="427.0" prefWidth="455.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CouponController">
+   <children>
+      <Label layoutX="299.0" layoutY="14.0" prefHeight="66.0" prefWidth="153.0" text="شركة شومان الدولية   لاستيراد الكمبيوتر" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="24.0" text="01229556828">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="162.0" layoutY="81.0" prefHeight="32.0" prefWidth="218.0" text="ايصال استلام نقدي رقم">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="395.0" layoutY="128.0" text="الاسم:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="390.0" layoutY="183.0" text="العنوان:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="394.0" layoutY="244.0" text="المبلغ:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="437.0" layoutY="244.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="229.0" layoutY="245.0" prefHeight="17.0" prefWidth="63.0" text="فقط">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="address" layoutX="14.0" layoutY="183.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="32.0" prefWidth="374.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="-42.0" layoutY="251.0" prefHeight="90.0" prefWidth="262.0" text="................................................................................................................................................................................................................................................................................................................................." wrapText="true" />
+      <Label fx:id="date" layoutX="223.0" layoutY="322.0" prefHeight="42.0" prefWidth="224.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="338.0" text="المستلم">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="coupon_Number" layoutX="51.0" layoutY="87.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="money" layoutX="317.0" layoutY="245.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="76.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="279.0" layoutY="247.0" text="جنيه,,">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lname" layoutX="14.0" layoutY="131.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="374.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+   </children>
+</Pane>

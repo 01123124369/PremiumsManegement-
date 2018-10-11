@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="674.0" prefWidth="1220.0" style="-fx-background-color: #001a1a;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LaterController">
+   <children>
+      <VBox layoutX="1007.0" layoutY="10.0" prefHeight="650.0" prefWidth="195.0" spacing="52.0" style="-fx-background-color: #008080; -fx-border-color: black; -fx-border-width: 1.5;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#account_new" onMouseEntered="#setEntered" onMouseExited="#setExit" prefHeight="100.0" prefWidth="193.0" style="-fx-background-color: #003333;" text="اضافة عميل" textFill="#fcf8f8">
+               <font>
+                  <Font name="Cambria Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#payment" onMouseEntered="#setEntered" onMouseExited="#setExit" prefHeight="100.0" prefWidth="193.0" style="-fx-background-color: #003333;" text="دفع قسط" textFill="#fcf8f8">
+               <font>
+                  <Font name="Cambria Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#payments" onMouseEntered="#setEntered" onMouseExited="#setExit" prefHeight="100.0" prefWidth="197.0" style="-fx-background-color: #003333;" text="المدفوعات" textFill="#fcf8f8">
+               <font>
+                  <Font name="Cambria Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#signUP" onMouseEntered="#setEntered" onMouseExited="#setExit" prefHeight="169.0" prefWidth="181.0" style="-fx-background-color: #003333;" text="تسجيل الخروج" textFill="#fcf8f8">
+               <font>
+                  <Font name="Cambria Bold" size="20.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="2.0" />
+         </padding>
+      </VBox>
+      <Pane layoutX="18.0" layoutY="8.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="129.0" prefWidth="973.0" style="-fx-background-color: #009999; -fx-border-color: white;">
+         <children>
+            <Label alignment="TOP_RIGHT" contentDisplay="TOP" layoutX="478.0" layoutY="5.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="42.0" prefWidth="489.0" text="المتاخرون عدة اشهر او ايام من الشهر  الحالي عددهم" textFill="#fcf9f9">
+               <font>
+                  <Font name="Cambria" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="report" layoutX="384.0" layoutY="7.0" prefHeight="38.0" prefWidth="103.0" textFill="#e30e0e">
+               <font>
+                  <Font name="Cambria" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="745.0" layoutY="47.0" text="مجموع المبالغ المتأخرة" textFill="#eee7e7">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="report2" layoutX="631.0" layoutY="45.0" prefHeight="38.0" prefWidth="114.0" textFill="#e10e0e">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="52.0" text="جنيه.. . . يجب الاتصال بالمتاخرين شهر او اكثر و ابلاغهم بضرورة دفع القسط" textFill="#eeeded" underline="true">
+               <font>
+                  <Font name="Cambria" size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="40.0" layoutY="83.0" mnemonicParsing="false" onAction="#getLaters" onMouseEntered="#setEntered" onMouseExited="#setExit" prefHeight="35.0" prefWidth="140.0" text="تحديث">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+         </children>
+      </Pane>
+      <Pane layoutX="18.0" layoutY="138.0" prefHeight="533.0" prefWidth="973.0" style="-fx-background-color: #004d4d; -fx-border-color: white;">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <children>
+            <TableView fx:id="table" layoutX="9.0" layoutY="39.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="483.0" prefWidth="954.0">
+              <columns>
+                <TableColumn fx:id="name" prefWidth="285.0" text="الاسم" />
+                  <TableColumn fx:id="village" prefWidth="145.0" text="القرية" />
+                  <TableColumn fx:id="lateMoney" prefWidth="91.0" text="المبالغ المتأخرة" />
+                  <TableColumn fx:id="lateDays" prefWidth="112.0" text="ايام التاخر" />
+                  <TableColumn fx:id="premuimValue" prefWidth="88.0" text="القسط الشهري" />
+                  <TableColumn fx:id="phone" prefWidth="232.0" text="الهاتف" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</Pane>

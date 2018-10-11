@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="694.0" prefWidth="1223.0" style="-fx-background-color: #001a1a;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ManageController">
+   <children>
+      <VBox layoutX="1027.0" layoutY="12.0" prefHeight="671.0" prefWidth="173.0" spacing="40.0" style="-fx-background-color: #008080; -fx-border-color: black; -fx-border-width: 1.5;">
+         <children>
+            <Button mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#account_new" onDragEntered="#setEntereds" onDragExited="#setExits" onMouseEntered="#setEntereds" onMouseExited="#setExits" prefHeight="100.0" prefWidth="196.0" style="-fx-background-color: #003333; -fx-border-color: black;" text="عميل جديد" textFill="#fffefe">
+               <font>
+                  <Font name="Cambria" size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#payment" onDragEntered="#setEntereds" onDragExited="#setExits" onMouseEntered="#setEntereds" onMouseExited="#setExits" prefHeight="100.0" prefWidth="191.0" style="-fx-background-color: #003333; -fx-border-color: black;" text="بحث/دفع" textFill="#fffefe">
+               <font>
+                  <Font name="Cambria" size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#getLaters" onDragEntered="#setEntereds" onDragExited="#setExits" onMouseEntered="#setEntereds" onMouseExited="#setExits" prefHeight="100.0" prefWidth="177.0" style="-fx-background-color: #003333; -fx-border-color: black;" text="المتأخرون" textFill="#fffefe">
+               <font>
+                  <Font name="Cambria" size="24.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#protect_info" onMouseEntered="#setEntereds" onMouseExited="#setExits" prefHeight="99.0" prefWidth="159.0" style="-fx-background-color: #003333;" text="البيانات" textFill="#fcf7f7">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#signUP" onDragEntered="#setEntereds" onDragExited="#setExits" onMouseEntered="#setEntereds" onMouseExited="#setExits" prefHeight="104.0" prefWidth="159.0" style="-fx-background-color: #003333; -fx-text-fill: white; -fx-border-color: black;" text="تسجيل خروج" textFill="#fffefe">
+               <font>
+                  <Font name="Cambria" size="24.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <Pane layoutX="553.0" layoutY="312.0" prefHeight="373.0" prefWidth="462.0" style="-fx-background-color: #004d4d;">
+         <children>
+            <VBox layoutX="9.0" layoutY="31.0" prefHeight="351.0" prefWidth="353.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="c_name" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="6.0" prefWidth="234.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1.5;" />
+                  <TextField fx:id="c_village" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="23.0" prefWidth="234.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1.5;" />
+                  <TextField fx:id="c_address" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="24.0" prefWidth="234.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1.5;" />
+                  <TextField fx:id="premiumDate" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" prefWidth="234.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1.5;" />
+                  <TextField fx:id="premiumValue" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" prefWidth="234.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1.5;" />
+                  <TextField fx:id="RemainedMony" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" prefWidth="234.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1.5;" />
+                  <TextField fx:id="latedays" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" prefWidth="234.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 1.5;" />
+                  <TextField fx:id="guarantorName" editable="false" style="-fx-border-width: 1.5; -fx-border-color: black;" />
+                  <TextField fx:id="guarantorId" editable="false" style="-fx-border-width: 1.5; -fx-border-color: black;" />
+               </children>
+            </VBox>
+            <VBox layoutX="362.0" layoutY="29.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="351.0" prefWidth="95.0" spacing="21.0">
+               <children>
+                  <Label nodeOrientation="RIGHT_TO_LEFT" text="اسم العميل" textFill="#f8f6f6">
+                     <font>
+                        <Font name="Cambria Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="12.0" prefWidth="60.0" text="مدينة/قرية" textFill="#f8f6f6">
+                     <font>
+                        <Font name="Cambria Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label nodeOrientation="RIGHT_TO_LEFT" text="العنوان" textFill="#f8f6f6">
+                     <font>
+                        <Font name="Cambria Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label nodeOrientation="RIGHT_TO_LEFT" text="تاريخ الاستحقاق" textFill="#f8f6f6">
+                     <font>
+                        <Font name="Cambria Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label nodeOrientation="RIGHT_TO_LEFT" text="قيمة القسط" textFill="#f8f6f6">
+                     <font>
+                        <Font name="Cambria Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" prefWidth="81.0" text="المبلغ المتبقي" textFill="#f8f6f6">
+                     <font>
+                        <Font name="Cambria Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label text="ايام التأخر" textFill="#f5f0f0">
+                     <font>
+                        <Font name="Cambria" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="اسم الضامن" textFill="#fcf9f9">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label text="رقم الضامن" textFill="#fcf9f9">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label layoutX="136.0" layoutY="1.0" text="بيانات العميل" textFill="#eeeaea">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="3.0" layoutY="7.0" prefHeight="57.0" prefWidth="1011.0" style="-fx-background-color: #009999;">
+         <children>
+            <Label layoutX="400.0" layoutY="-6.0" prefHeight="57.0" prefWidth="224.0" text="المدفوعات" textFill="#f9f9ff">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="562.0" layoutY="106.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#onSelected" prefHeight="199.0" prefWidth="444.0">
+        <columns>
+          <TableColumn fx:id="tid" prefWidth="139.0" text="رقم العميل" />
+          <TableColumn fx:id="newOrpay" minWidth="0.0" prefWidth="115.0" text="الحالة" />
+            <TableColumn fx:id="tMoney" prefWidth="75.0" text="المبلغ" />
+            <TableColumn fx:id="employee" prefWidth="101.0" text="الموظف" />
+        </columns>
+      </TableView>
+      <Separator layoutX="537.0" layoutY="70.0" orientation="VERTICAL" prefHeight="610.0" prefWidth="15.0" />
+      <Separator layoutX="5.0" layoutY="169.0" prefHeight="17.0" prefWidth="487.0" />
+      <Separator layoutX="-30.0" layoutY="284.0" prefHeight="5.0" prefWidth="523.0" />
+      <Separator layoutX="9.0" layoutY="396.0" prefHeight="5.0" prefWidth="487.0" />
+      <Label layoutX="259.0" layoutY="401.0" text="اجمالي المدفوعات" textFill="#f8f5f5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="currentPayed" editable="false" layoutX="14.0" layoutY="449.0" prefHeight="36.0" prefWidth="136.0" />
+      <Separator layoutX="152.0" layoutY="419.0" orientation="VERTICAL" prefHeight="100.0" prefWidth="11.0" />
+      <Label layoutX="28.0" layoutY="411.0" prefHeight="21.0" prefWidth="106.0" text="المدفوعات اليومية" textFill="#f2e9e9">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="424.0" layoutY="429.0" text="من" textFill="#f8f7f7" />
+      <Label layoutX="258.0" layoutY="70.0" text="الموظف الاول" textFill="#f5eeee">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="from" layoutX="350.0" layoutY="454.0" prefHeight="36.0" prefWidth="174.0" />
+      <DatePicker fx:id="to" layoutX="161.0" layoutY="454.0" prefHeight="36.0" prefWidth="174.0" />
+      <TextField fx:id="val" editable="false" layoutX="238.0" layoutY="521.0" prefHeight="40.0" prefWidth="190.0" />
+      <Label layoutX="254.0" layoutY="429.0" text="الي" textFill="#f8efef">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="embloyee1" editable="false" layoutX="323.0" layoutY="119.0" prefHeight="40.0" prefWidth="149.0" />
+      <Button layoutX="188.0" layoutY="119.0" mnemonicParsing="false" onAction="#getRecievedEMB1" onMouseEntered="#setEntereds" onMouseExited="#setExits" prefHeight="40.0" prefWidth="95.0" text="تم الاستلام" />
+      <Label layoutX="258.0" layoutY="186.0" text="الموظف الثاني" textFill="#f5eeee">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="embloyee2" editable="false" layoutX="323.0" layoutY="235.0" prefHeight="40.0" prefWidth="149.0" />
+      <Button layoutX="188.0" layoutY="235.0" mnemonicParsing="false" onAction="#getRecievedEMB2" onMouseEntered="#setEntereds" onMouseExited="#setExits" prefHeight="40.0" prefWidth="95.0" text="تم الاستلام" />
+      <Label layoutX="302.0" layoutY="297.0" text="المدير" textFill="#f5eeee">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="manager" editable="false" layoutX="323.0" layoutY="346.0" prefHeight="40.0" prefWidth="149.0" />
+      <Button layoutX="188.0" layoutY="346.0" mnemonicParsing="false" onAction="#getRecievedManager" onMouseEntered="#setEntereds" onMouseExited="#setExits" prefHeight="40.0" prefWidth="95.0" text="تم الاستلام" />
+      <Separator layoutX="10.0" layoutY="572.0" prefHeight="5.0" prefWidth="523.0" />
+      <Button layoutX="442.0" layoutY="521.0" mnemonicParsing="false" onAction="#setFromtoTO" onMouseEntered="#setEntereds" onMouseExited="#setExits" prefHeight="40.0" prefWidth="76.0" text="القيمة" />
+      <Button layoutX="303.0" layoutY="628.0" mnemonicParsing="false" onAction="#getAllmoney" onMouseEntered="#setEntereds" onMouseExited="#setExits" prefHeight="39.0" prefWidth="87.0" text="القيمة" />
+      <Label layoutX="179.0" layoutY="572.0" prefHeight="29.0" prefWidth="163.0" text="القيمة السوقية" textFill="#fcf6f6">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="allaccountMony" layoutX="131.0" layoutY="628.0" prefHeight="39.0" prefWidth="149.0" />
+      <Button layoutX="636.0" layoutY="70.0" mnemonicParsing="false" onAction="#fillFields" onMouseEntered="#setEntereds" onMouseExited="#setExits" prefHeight="27.0" prefWidth="296.0" style="-fx-background-color: green; -fx-background-radius: 200;" text="اشعاراتي" textFill="#f5f0f0">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+   </children>
+</Pane>
