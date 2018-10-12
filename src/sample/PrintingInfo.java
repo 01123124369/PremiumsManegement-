@@ -6,7 +6,7 @@ public class PrintingInfo {
     private static String address;
     private static  int value ;
     public void setPrintingInfo(String name ,String address,int value ){
-        PrintingInfo .setCouponNumber(DBOberations.getRandomcoupon());
+        PrintingInfo.setCouponNumber(DBOberations.getRandomcoupon());
         PrintingInfo.setName(name);
         PrintingInfo.setAddress(address);
         PrintingInfo.setValue(value );

@@ -187,7 +187,6 @@ public class AddclientController extends ControllerCommuinication implements Ini
     }
     file.mkdir();
     }
-
 @FXML
 public void suggestPremuim(Event event){
     //it controlles only at premuim value ..its value depend on number of premuim the user want but i male it equal 10 as default
@@ -215,7 +214,6 @@ public void searchforClient(Event event){
     else {
       table.setVisible(true);
       table.setItems(list);
-
     }
   }catch(Exception se){se.printStackTrace();}
 
@@ -244,7 +242,6 @@ public boolean checkData() {
    JOptionPane.showMessageDialog(null,"خطأ في المدخلات");
  }
  return rv;
-
 }
 public void initialTable(){//initiall coloumn off the table
   tid.setCellValueFactory(new PropertyValueFactory<ClientData,Integer>("id"));
@@ -299,11 +296,7 @@ public void addRowsended(ResultSet rs){
       list.add(client);
     }
   }catch (SQLException se){}
-
 }
-
-
-
 @FXML
  public void calculateNewaccount(Event event){
   //calculate remained money of new account
@@ -340,7 +333,6 @@ public int getIndex(){//i should get index so that i know which row off rs i nee
   //if even delete it rs rows number is constant so i need it when i pass it to method that will use rs
   return   table.getSelectionModel().getSelectedIndex();
 }
-
   public   void setFieldsautomatically(ClientData client,TextField name, TextField jop, TextField government_id, ComboBox place , TextField address, TextField phon, TextField guarantor, TextField guranor_phone){
       name.setText(client.getFullname());
       jop.setText(client.getJop());
@@ -350,14 +342,10 @@ public int getIndex(){//i should get index so that i know which row off rs i nee
       phon.setText(client.getPhone());
       place.setValue(client.getVillage());
       old_remainedmoney.setText(String.valueOf(client.getOremainedmoney()));
-
-
   }
   //if the row come from searching at ended_accounts i will use this overload mehod
   public   void setFieldsautomatically(ClientData client,TextField name){
     name.setText(client.getFullname());
-
-
   }
   public void addNewtoOld(){//set addnew to old field value
   int old=Integer.parseInt(old_remainedmoney.getText());
@@ -377,7 +365,6 @@ public int getIndex(){//i should get index so that i know which row off rs i nee
      super.showScene(event,"laters"," المتأخرين عن الدفع");
    rs.close();
  }catch (SQLException se){}
-
   }
   @FXML
   public void payments(Event event){
@@ -388,10 +375,7 @@ public int getIndex(){//i should get index so that i know which row off rs i nee
         super.showScene(event,"manage", "ادارة الخزينة");
       rs.close();
     }catch (SQLException se){}
-
-
-
-  }
+ }
   @FXML
   public void payment(Event event){
     super.showScene(event,"payment", "بحث/دفع");
@@ -402,7 +386,6 @@ public int getIndex(){//i should get index so that i know which row off rs i nee
     java .io.File file =new File("F://"+name+".pdf");
     file.mkdir();
   }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
          DBOberations.setDate(datePicker);//set datepicker default value
@@ -412,7 +395,7 @@ public int getIndex(){//i should get index so that i know which row off rs i nee
          id.setText(String.valueOf(DBOberations.getUnusedId("client_info")));//id off the nearest place at table ready for inserting
          initialTable();
     }
-    @FXML
+  @FXML
     public  void  setEntered(Event event){
      super.setonEntered(event);
     }
@@ -420,6 +403,4 @@ public int getIndex(){//i should get index so that i know which row off rs i nee
   public  void  setExit(Event event){
   super.setonExit(event );
   }
-
-
 }
